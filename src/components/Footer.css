@@ -1,128 +1,234 @@
-/* Footer.css */
 .footer {
-  background: #19191a;
-  color: #fff;
-  margin-top: auto;
-  padding: 0;
-  font-family: inherit;
-}
-.footer-main {
+  background-color: #2a2a2a;
+  color: #ccc;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2.5rem 2rem 1.5rem 2rem;
+  padding: 40px;
+  flex-wrap: wrap;
 }
-.footer-col {
-  flex: 1 1 0;
-  flex-basis: 0;
-  min-width: 0;
+
+/* Left Section */
+.footer-left {
+  position: relative;
+  left: 11vh;
+  max-width: 350px;
 }
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-.footer-logo {
-  width: 150px;
-  height: 60px;
-  margin-bottom: 0.7rem;
-}
-.footer-ames-title {
-  font-size: 3.5rem;
-  font-weight: 900;
-  color: #f7842b;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.2rem;
-  font-family: inherit;
+
+.logo {
   width: 50px;
 }
-.footer-ames-desc {
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 0.7rem;
-  line-height: 1.5;
+.footer-left img{
+  
+  height: 80px;
+  width: 80px;
 }
-.footer-links-title {
-  color: #f7842b;
-  font-weight: 700;
-  margin-bottom: 0.7rem;
-  font-size: 1.1rem;
+
+
+.footer-left p {
+  font-size: 14px;
+  line-height: 1.4;
 }
-.footer-links ul {
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 16px;
+  margin-right: 8px;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background-color: orange;
+  color: white;
+}
+
+/* Right Section */
+.footer-right {
+  display: flex;
+  position: relative;
+  right: 11vh;
+  gap: 50px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.footer-column ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
-.footer-links ul li {
-  margin-bottom: 0.5rem;
+
+.footer-column ul li {
+  margin-bottom: 6px;
 }
-.footer-links ul li a {
-  color: #fff;
+
+.footer-column ul li a {
+  color: #ccc;
   text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.2s;
+  font-size: 14px;
 }
-.footer-links ul li a:hover {
-  color: #f7842b;
+
+.footer-column ul li a:hover {
+  color: orange;
 }
-.footer-contact-desc {
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 0.7rem;
-  line-height: 1.5;
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.4;
 }
-.footer-social-icons {
-  display: flex;
-  gap: 1.2rem;
-  margin-top: 0.5rem;
-}
-.footer-social-icon {
-  color: #fff;
-  font-size: 1.7rem;
-  transition: color 0.2s;
-}
-.footer-social-icon:hover {
-  color: #f7842b;
-}
-.footer-divider {
-  border-bottom: 2px dashed #f7842b;
-  margin: 0 0 0.5rem 0;
-}
-.footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.5rem 2rem 1.2rem 2rem;
-  font-size: 0.98rem;
-}
-.footer-bottom-links {
-  display: flex;
-  gap: 1.5rem;
-}
-.footer-bottom-links a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.footer-bottom-links a:hover {
-  color: #f7842b;
-}
-@media (max-width: 900px) {
-  .footer-main, .footer-bottom {
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1.5rem;
-    padding: 2rem 1rem 1rem 1rem;
+    text-align: center;
   }
-  .footer-col {
-    min-width: unset;
-    width: 100%;
+
+  .footer-right {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
   }
-  .footer-bottom {
-    padding: 0.5rem 1rem 1.2rem 1rem;
+}
+.zxz {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  height: 100px;
+}
+.ameslogo {
+  height: 100px;
+  width: 150px;
+}
+.ameslogo img {
+/* This is the key change */
+  position: relative;
+  bottom: 68px;
+}
+
+#contact.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Tablet and larger phones */
+@media (max-width: 1024px) {
+  .footer {
+    gap: 100px;
+    padding: 30px;
+    justify-content: space-around;
+  }
+
+  .footer-left {
+    max-width: 45%;
+  }
+
+  .footer-right {
+    gap: 30px;
+  }
+
+  .zxz {
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .footer-left {
+    max-width: 100%;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .zxz {
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .footer-left p {
+    font-size: 13px;
+  }
+  
+  .footer-column h3 {
+    font-size: 15px;
+  }
+
+  .footer-column ul li a {
+    font-size: 13px;
+  }
+}
+/* Mobile phones (general) */
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-left, .footer-right {
+    max-width: 100%;
+  }
+  .zxz {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+/* iPad Mini (Portrait) */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  .footer-right {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* Surface Pro 7 (wider tablet) */
+@media (max-width: 912px) {
+  .footer {
+    gap: 50px;
+    padding: 30px;
+    justify-content: space-around;
+  }
+  .footer-left {
+    max-width: 45%;
+  }
+}
+
+/* Nest Hub */
+@media (max-width: 1024px) {
+  .footer {
+    gap: 100px;
   }
 }
