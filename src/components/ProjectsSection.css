@@ -174,3 +174,355 @@
     height: 140px;
   }
 }
+
+.featured-projects-nitk {
+  width: 100%;
+  min-height: 500px;
+  background: #2a2a2a;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3.5rem 0 4rem 0;
+  gap: 0;
+  box-sizing: border-box;
+  
+}
+
+.fp-content-left {
+  flex: 1.2;
+  max-width: 620px;
+  padding-right: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.fp-header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.fp-desc {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.fp-projects-list {
+  width: 100%;
+}
+
+.fp-project-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;               /* bullet + text container in a row */
+  align-items: flex-start;
+  gap: 0.9rem;                  /* space between bullet and text */
+  padding: 1.1rem 0;
+  border-bottom: 1px solid #444;
+  position: relative;
+  color: #fff;
+  transition: background 0.18s, color 0.18s;
+  outline: none;
+}
+
+.fp-project-title.active,
+.fp-project-title:hover,
+.fp-project-title:focus {
+  background: #232323;
+  color: #f7842b;
+}
+
+.fp-bullet {
+  font-size: 1.5rem;
+  margin-top: 0.1rem;
+  color: #f7842b;
+  flex-shrink: 0;
+  width: 1.7rem;
+  text-align: center;
+}
+
+.title-details {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+}
+
+.title-details .title {
+  text-align: left;
+}
+
+.fp-project-details {
+  margin-top: 0.7rem;
+  margin-left: 0; /* aligned with title */
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #dedede;
+  animation: fadeInDown 0.3s;
+  position: relative;
+  overflow: visible;
+  text-align: left;
+}
+
+.fp-project-description {
+  margin-bottom: 0.9rem;
+  line-height: 1.6;
+  z-index: 2;
+  position: relative;
+}
+
+.fp-read-more-btn {
+  display: inline-block;
+  padding: 0.45rem 1.1rem;
+  border: 1.5px solid #f7842b;
+  border-radius: 3px;
+  color: #f7842b;
+  text-decoration: none;
+  font-weight: 600;
+  background: transparent;
+  transition: background 0.14s, color 0.14s;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  z-index: 2;
+  position: relative;
+}
+
+.fp-read-more-btn:hover {
+  background: #f7842b;
+  color: #2a2a2a;
+}
+
+.fp-progress-bar-container {
+  width: 100%;
+  position: relative;
+  margin-top: 1.2rem;
+}
+
+.fp-progress-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fp-progress-bar-inner {
+  height: 100%;
+  background: #f7842b;
+  width: 0%;
+  animation: fp-bar-animate 4s linear forwards;
+}
+
+@keyframes fp-bar-animate {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.fp-content-right {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-left: 1rem;
+}
+
+@keyframes fadeInThroughX {
+  0% {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(9px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fp-project-image {
+  width: 100%;
+  max-width: 490px;
+  min-width: 280px;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.22);
+  background: #222;
+  margin-top: 0.2rem;
+  animation: fadeInThroughX 0.3s ease-in-out;
+  top:50px;
+  left : 50px;
+  position: relative;
+}
+
+.fp-image-placeholder {
+  width: 100%;
+  max-width: 420px;
+  min-width: 280px;
+  height: 320px;
+  border-radius: 12px;
+  background: #232323;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f7842b;
+  font-size: 1.3rem;
+  font-weight: 700;
+  animation: fadeInThroughX 0.3s ease-in-out;
+}
+
+@media (max-width: 900px) {
+  .featured-projects-nitk {
+    flex-direction: column;
+    padding: 2rem 0 3rem 0;
+    align-items: center;
+  }
+  .fp-content-left {
+    max-width: 97vw;
+    padding: 0 1vw 0 1vw;
+  }
+  .fp-content-right {
+    margin-top: 2rem;
+    max-width: 97vw;
+    min-width: 0;
+    padding-left: 0;
+    justify-content: center;
+  }
+  .fp-project-image, .fp-image-placeholder {
+    max-width: 97vw;
+    min-width: 0;
+    height: 230px;
+  }
+}
+/* Tablet and larger phones */
+@media (max-width: 1024px) {
+  .featured-projects-nitk {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .fp-content-left, .fp-content-right {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .fp-content-right {
+    margin-top: 2rem;
+  }
+
+  .fp-header {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .fp-desc {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .fp-projects-list {
+    margin-top: 1rem;
+  }
+
+  .fp-project-title {
+    font-size: 1.2rem;
+  }
+
+  .fp-project-details {
+    font-size: 1rem;
+  }
+
+  .fp-project-image, .fp-image-placeholder {
+    height: 300px;
+    position: static;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 768px) {
+  .featured-projects-nitk {
+    padding: 1.5rem 1rem;
+  }
+
+  .fp-header {
+    font-size: 1.8rem;
+  }
+
+  .fp-desc {
+    font-size: 0.9rem;
+  }
+  
+  .fp-project-title {
+    padding: 0.8rem 0;
+    font-size: 1rem;
+  }
+
+  .fp-project-details {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .fp-read-more-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .fp-project-image, .fp-image-placeholder {
+    height: 250px;
+  }
+}
+/* Mobile phones (general) */
+@media (max-width: 480px) {
+  .featured-projects-nitk {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .fp-header {
+    font-size: 1.5rem;
+  }
+  .fp-desc {
+    font-size: 0.9rem;
+  }
+  .fp-project-image, .fp-image-placeholder {
+    height: 200px;
+  }
+}
+
+/* iPad Mini (Portrait) and Foldable devices */
+@media (max-width: 768px) {
+  .featured-projects-nitk {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .fp-content-left, .fp-content-right {
+    max-width: 100%;
+    padding: 0;
+  }
+  .fp-project-image, .fp-image-placeholder {
+    height: 300px;
+  }
+}
+
+/* Surface Pro 7 */
+@media (max-width: 912px) {
+  /* Layout remains side-by-side, but with adjusted padding/margins */
+  .featured-projects-nitk {
+    padding: 3rem 5%;
+  }
+}

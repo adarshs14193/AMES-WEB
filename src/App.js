@@ -32,8 +32,8 @@ function App() {
         }} ></hr></div>
         <ul className="footer-bottom" >
           <li className="footer-text" >© {year} AMES. All rights reserved.</li>
-          <li className="footer-text2" ><a href='#' style={{ color: '#fff', textDecoration: 'none' }}>Privacy Policy</a></li>
-          <li className="footer-text3"><a href='#' style={{ color: '#fff', textDecoration: 'none' }}>Terms of Service</a></li>
+          <li className="footer-text2" ><a href='*' style={{ color: '#fff', textDecoration: 'none' }}>Privacy Policy</a></li>
+          <li className="footer-text3"><a href='*' style={{ color: '#fff', textDecoration: 'none' }}>Terms of Service</a></li>
         </ul>
       </div>
     </Router>

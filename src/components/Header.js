@@ -22,7 +22,7 @@ const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="*" className='object'>Projects</a>
+          <a href="/projects" className='object'>Projects</a>
         </li>
         <li><a className="object nav-button" href="/Event"
         >Events</a></li>
