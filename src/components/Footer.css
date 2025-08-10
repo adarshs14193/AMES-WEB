@@ -1,0 +1,128 @@
+/* Footer.css */
+.footer {
+  background: #19191a;
+  color: #fff;
+  margin-top: auto;
+  padding: 0;
+  font-family: inherit;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 1.5rem 2rem;
+}
+.footer-col {
+  flex: 1 1 0;
+  flex-basis: 0;
+  min-width: 0;
+}
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-logo {
+  width: 150px;
+  height: 60px;
+  margin-bottom: 0.7rem;
+}
+.footer-ames-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #f7842b;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.2rem;
+  font-family: inherit;
+  width: 50px;
+}
+.footer-ames-desc {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+.footer-links-title {
+  color: #f7842b;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  margin-bottom: 0.5rem;
+}
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-links ul li a:hover {
+  color: #f7842b;
+}
+.footer-contact-desc {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.7rem;
+  line-height: 1.5;
+}
+.footer-social-icons {
+  display: flex;
+  gap: 1.2rem;
+  margin-top: 0.5rem;
+}
+.footer-social-icon {
+  color: #fff;
+  font-size: 1.7rem;
+  transition: color 0.2s;
+}
+.footer-social-icon:hover {
+  color: #f7842b;
+}
+.footer-divider {
+  border-bottom: 2px dashed #f7842b;
+  margin: 0 0 0.5rem 0;
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem 1.2rem 2rem;
+  font-size: 0.98rem;
+}
+.footer-bottom-links {
+  display: flex;
+  gap: 1.5rem;
+}
+.footer-bottom-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-bottom-links a:hover {
+  color: #f7842b;
+}
+@media (max-width: 900px) {
+  .footer-main, .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 2rem 1rem 1rem 1rem;
+  }
+  .footer-col {
+    min-width: unset;
+    width: 100%;
+  }
+  .footer-bottom {
+    padding: 0.5rem 1rem 1.2rem 1rem;
+  }
+}

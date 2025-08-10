@@ -1,0 +1,176 @@
+.carousel-fade-up {
+  opacity: 0;
+  transform: translateY(60px) scale(0.96);
+  filter: blur(4px);
+  transition:
+    opacity 0.7s cubic-bezier(.23,1.01,.32,1),
+    transform 0.7s cubic-bezier(.23,1.01,.32,1),
+    filter 0.7s cubic-bezier(.23,1.01,.32,1);
+}
+.carousel-fade-up.fade-up {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  filter: blur(0);
+}
+.projects-cards .projects-card.slide-up {
+  /* Staggered animation delays for a cascading effect */
+  transition-delay: 0s;
+}
+.projects-cards .projects-card.slide-up:nth-child(2) { transition-delay: 0.08s; }
+.projects-cards .projects-card.slide-up:nth-child(3) { transition-delay: 0.16s; }
+.projects-cards .projects-card.slide-up:nth-child(4) { transition-delay: 0.24s; }
+.projects-cards .projects-card.slide-up:nth-child(5) { transition-delay: 0.32s; }
+.projects-cards .projects-card.slide-up:nth-child(6) { transition-delay: 0.40s; }
+.projects-title:not(.fade-up), .projects-card:not(.fade-up) {
+  opacity: 0;
+  transform: translateY(60px) scale(0.96);
+  filter: blur(4px);
+}
+.projects-title.fade-up, .projects-card.fade-up {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  filter: blur(0);
+  transition:
+    opacity 0.7s cubic-bezier(.23,1.01,.32,1),
+    transform 0.7s cubic-bezier(.23,1.01,.32,1),
+    filter 0.7s cubic-bezier(.23,1.01,.32,1);
+}
+.projects-img {
+  width: 340px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  background: #ededed;
+}
+
+.projects-btn {
+  margin-top: 1.5rem;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(247,132,43,0.10);
+}
+.projects-btn:hover {
+  background: #ffb347;
+  color: #2a2a2a;
+}
+/* Projects Section Styles - similar to AboutSection */
+.projects-section {
+  background-color: #2a2a2a;
+  flex: 1;
+  padding: 4rem 0;
+}
+
+.projects-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.projects-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.projects-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Card section for each project */
+.projects-card {
+  background: var(--dark-grey);
+  border: 2px solid var(--orange);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  padding: 1.5rem 2vw;
+  width: 95%;
+  max-width: 1400px;
+  color: var(--pure-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
+}
+
+.projects-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(247,132,43,0.15);
+  border-color: var(--pure-white);
+}
+
+.projects-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  margin-bottom: 2.5rem;
+}
+.projects-row.reverse {
+  flex-direction: row-reverse;
+}
+.projects-img-col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-text-col {
+  flex: 1.2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.projects-card-text {
+  color: #e0e0e0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+.placeholder-box {
+  width: 300px;
+  height: 220px;
+  background: #ededed;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 900px) {
+  .projects-row, .projects-row.reverse {
+    flex-direction: column !important;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .projects-img-col, .projects-text-col {
+    width: 100%;
+    flex: unset;
+    text-align: center;
+  }
+  .placeholder-box {
+    width: 220px;
+    height: 140px;
+  }
+}

@@ -1,0 +1,134 @@
+
+.card-slider {
+  width: 100%;
+  max-width: 900px;
+  margin: 4.5rem auto 3rem auto; /* Increased top margin for better spacing */
+  padding: 0 0.5rem;
+}
+
+.slider-card-outer {
+  display: flex !important;
+  justify-content: center;
+  align-items: flex-end;
+  height: 420px;
+  transition: transform 0.3s;
+}
+
+.slider-card {
+  width: 320px;
+  min-height: 420px;
+  border-radius: 22px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 1;
+  padding-top: 55px;
+}
+
+.slick-center .slider-card {
+  transform: scale(1.12) translateY(-18px);
+  z-index: 2;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.22);
+}
+
+.slider-card-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1.2rem 0.2rem 1.2rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+.slider-icon {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.slider-icon:hover {
+  opacity: 1;
+}
+.slider-card-img {
+  width: 240px;
+  height: 180px;
+  object-fit: contain;
+  margin: 0.5rem 0 0.5rem 0;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+}
+/* Center content in the carousel card */
+.slider-card-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.2rem;
+  margin-top: 0.5rem;
+}
+.slider-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.slider-card-price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  opacity: 0.92;
+}
+.slider-card-action {
+  width: 100%;
+  padding: 1.2rem 1.2rem 1.3rem 1.2rem;
+  display: flex;
+  justify-content: center;
+}
+.slider-add-btn {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.slider-add-btn:hover {
+  background: #f7842b;
+  color: #fff;
+}
+
+.slick-dots li button:before {
+  color: #f7842b;
+  font-size: 1.1rem;
+}
+.slick-dots li.slick-active button:before {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .slider-card, .slick-center .slider-card {
+    width: 90vw;
+    min-height: 340px;
+    transform: none !important;
+  }
+  .slider-card-img {
+    width: 120px;
+    height: 90px;
+  }
+  .slider-card-content, .slider-card-action {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
