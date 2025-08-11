@@ -4,6 +4,8 @@ import useTypewriter from './useTypewriter';
 import './ProjectsSection.css';
 import eventsData from "../Data/project.js";
 import ImageCarousel from './ImageCarousel';
+import aboutImage from '../assets/pro.png';
+import objectivesImage from '../assets/pro.png';
 
 let scrollToEventSection = () => { };
 const AUTO_NEXT_INTERVAL = 4000; // 4 seconds
@@ -54,7 +56,10 @@ function ProjectsSection() {
         >
           <ImageCarousel />
         </div>
-        <div className={`about-content-wrapper${fadeRefs.current[2] && fadeRefs.current[2].classList && fadeRefs.current[2].classList.contains('fade-up') ? ' fade-up' : ''}`} ref={el => fadeRefs.current[2] = el}>
+      </div>
+        <div className="about-section" >
+        {/* First Row: About Us */}
+        <div className="about-content-wrapper">
           <div className="about-text">
             <span className="about-us-label">About Us</span>
             <div style={{ height: '3px', width: '50px', background: '#f7842b', margin: '8px 0 16px 0', borderRadius: '2px' }} />
@@ -65,28 +70,29 @@ function ProjectsSection() {
             <button className="about-btn">Know More</button>
           </div>
           <div className="about-image">
-            <img src="/pro.png" alt="AMES Organization" />
+            <img src={aboutImage} alt="Graduation" />
           </div>
         </div>
-
-        <div className={`about-content-wrapper${fadeRefs.current[3] && fadeRefs.current[3].classList && fadeRefs.current[3].classList.contains('fade-up') ? ' fade-up' : ''}`} ref={el => fadeRefs.current[3] = el}>
+      
+        {/* Second Row: Objectives */}
+        <div className="about-content-wrapper" style={{ marginTop: "2.5rem" }}>
           <div className="about-image2">
-            <img src="/pro.png" alt="Department Overview" />
+            <img src={objectivesImage} alt="Classroom" />
           </div>
           <div className="about-text2">
             <span className="about-us-label">Objectives</span>
             <div style={{ height: '3px', width: '50px', background: '#f7842b', margin: '8px 0 16px 0', borderRadius: '2px' }} />
-            <h2 className="about-title">Objectives That Drives Us</h2>
-            <ul className="about-desc" style={{ marginBottom: '1.5rem' }}>
+            <h2 className="about-title" >Objectives That Drives Us</h2>
+            <ul className="about-desc" style={{ marginBottom: "1.5rem" }}>
               <li>Cultivate a culture of engineering excellence through shared knowledge and collaborative initiatives.</li>
               <li>Bridge the academia-industry gap via projects & mentorship.</li>
               <li>Promote interdisciplinary research & social innovation</li>
             </ul>
             <button className="about-btn">Explore</button>
           </div>
-        </div>
-        {/* <div className="featured-projects-nitk" ref={eventRef}> */}
-          {/* <div className="fp-content-left">
+      </div>
+      {/* <div className="featured-projects-nitk" ref={eventRef}> */}
+      {/* <div className="fp-content-left">
             <div className="fp-header" >Featured Events</div>
             <div className="fp-desc">
               NITK instituted the Alumni Awards to recognize the exemplary
@@ -134,7 +140,7 @@ function ProjectsSection() {
             </div>
           </div> */}
 
-          {/* <div className="fp-content-right">
+      {/* <div className="fp-content-right">
             {eventsData[activeIndex].image ? (
               <img
                 src={eventsData[activeIndex].image}
@@ -147,9 +153,9 @@ function ProjectsSection() {
               </div>
             )}
           </div> */}
-        {/* </div> */}
-      </div>
-    </section>
+      {/* </div> */}
+    </div>
+    </section >
   );
 }
 
