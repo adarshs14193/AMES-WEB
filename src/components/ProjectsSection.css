@@ -87,9 +87,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 1.5rem;
   margin: 3rem 0 4rem 0;
-  padding: 2rem;
+  padding: 1rem;
+}
+
+.projects-section .about-content-wrapper:nth-child(2) {
+  margin-top: 2.5rem;
 }
 
 .projects-section .about-text,
@@ -101,7 +105,7 @@
 
 .projects-section .about-us-label {
   font-size: 1.1rem;
-  color: #f7842b;
+  color: #f7842b !important;
   opacity: 0.9;
   margin-bottom: 0.5rem;
   font-weight: 600;
@@ -110,16 +114,29 @@
   letter-spacing: 0.5px;
 }
 
+.about-underline {
+  height: 3px;
+  width: 50px;
+  background: #f7842b;
+  margin: 8px 0 16px 0;
+  border-radius: 2px;
+}
+
 .projects-section .about-title {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 1.2rem;
   line-height: 1.2;
-  color: #fff;
-  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #fff !important;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  /* Explicitly neutralize any gradient text styles coming from other CSS */
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  background-clip: initial !important;
+  -webkit-text-fill-color: #fff !important;
+  filter: none !important;
 }
 
 .projects-section .about-desc {
@@ -127,14 +144,17 @@
   margin-bottom: 1.8rem;
   opacity: 0.9;
   line-height: 1.7;
-  color: #e0e0e0;
+  color: #e0e0e0 !important;
+  display: block;
+  visibility: visible;
+  filter: none !important;
 }
 
 .projects-section .about-image img,
 .projects-section .about-image2 img {
   max-width: none;
-  min-width: 480px;
-  height: 300px;
+  min-width: 700px;
+  height: 380px;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 8px 32px rgba(0,0,0,0.3), 0 4px 16px rgba(247,132,43,0.2);
@@ -144,8 +164,8 @@
 }
 
 .projects-section .about-image2 img {
-  width: calc(100% - 40px);
-  margin-right: 40px;
+  width: calc(100% - 20px);
+  margin-right: 20px;
 }
 
 .projects-section .about-text ul {
@@ -163,7 +183,7 @@
 
 .projects-section .about-text ul li::before {
   content: '▸';
-  color: #f7842b;
+  color: #f7842b !important;
   font-weight: bold;
   position: absolute;
   left: -1.2rem;
@@ -691,23 +711,29 @@
 }
 .about-section {
   scroll-margin-top: 80px;
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 80px;
+  padding-right: 80px;
   padding-top: 4rem;
   padding-bottom: 4rem;
   color: #fff;
   border-radius: 12px;
   width: 100%;
-  max-width: 1800px; /* Add this line */
+  max-width: 1800px;
   box-sizing: border-box;
   margin: 0 auto;
+  background-color: #2a2a2a;
+  min-height: 400px;
+  display: block;
+  border: none; /* remove temporary debug border */
 }
 
 .about-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  min-height: 200px;
+  margin: 2rem 0;
 }
 
 .about-text {
@@ -770,7 +796,7 @@
 }
 
 .about-image2 img {
-  width: calc(100% - 40px); /* Reduce width from right */
+  width: calc(100% - 20px); /* Reduce width from right */
   max-width: none;
   min-width: 700px;
   height: 380px;
@@ -779,7 +805,7 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  margin-right: 40px; /* Add margin to reduce from right */
+  margin-right: 20px; /* Add margin to reduce from right */
 }
 
 
