@@ -82,8 +82,6 @@
   margin-bottom: 3rem;
 }
 
-
-
 @media (max-width: 1024px) {
   .projects-section .about-content-wrapper {
     padding: 1.5rem;
@@ -444,23 +442,29 @@
 
 .about-section {
   scroll-margin-top: 80px;
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 80px;
+  padding-right: 80px;
   padding-top: 4rem;
   padding-bottom: 4rem;
   color: #fff;
   border-radius: 12px;
   width: 100%;
-  max-width: 1800px; /* Add this line */
+  max-width: 1800px;
   box-sizing: border-box;
   margin: 0 auto;
+  background-color: #2a2a2a;
+  min-height: 400px;
+  display: block;
+  border: none; /* remove temporary debug border */
 }
 
 .about-content-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2.5rem;
+  gap: 1.5rem;
+  min-height: 200px;
+  margin: 2rem 0;
 }
 
 .about-text {
@@ -532,7 +536,7 @@
 }
 
 .about-image2 img {
-  width: calc(100% - 40px); /* Reduce width from right */
+  width: calc(100% - 20px); /* Reduce width from right */
   max-width: none;
   min-width: 600px;
   height: 380px;
@@ -541,7 +545,7 @@
   box-shadow: 0 4px 24px rgba(0,0,0,0.12);
   border-top-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  margin-right: 40px; /* Add margin to reduce from right */
+  margin-right: 20px; /* Add margin to reduce from right */
 }
 
 
