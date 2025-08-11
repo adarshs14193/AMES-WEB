@@ -65,13 +65,13 @@ function ProjectsSection() {
             <button className="about-btn">Know More</button>
           </div>
           <div className="about-image">
-            <img src="/pro.png" alt="Graduation" />
+            <img src="/pro.png" alt="AMES Organization" />
           </div>
         </div>
 
         <div className={`about-content-wrapper${fadeRefs.current[3] && fadeRefs.current[3].classList && fadeRefs.current[3].classList.contains('fade-up') ? ' fade-up' : ''}`} ref={el => fadeRefs.current[3] = el}>
           <div className="about-image2">
-            <img src="/pro.png" alt="Classroom" />
+            <img src="/pro.png" alt="Department Overview" />
           </div>
           <div className="about-text2">
             <span className="about-us-label">Objectives</span>
