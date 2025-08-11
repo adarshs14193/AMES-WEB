@@ -1,0 +1,54 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+} 
+
+.footer-text {
+  opacity: 0.3;
+  color: #fff;
+  text-align: left;
+  position: relative;
+  bottom: 20px;
+  left: 139px;
+}
+
+.footer-text2 {
+  opacity: 0.3;
+  color: #fff;
+  position: relative;
+  text-align: right;
+  bottom: 20px;
+  left: 110vh;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+
+
+.footer-text3 {
+  opacity: 0.3;
+  color: #fff;
+  position: relative;
+  text-align: right;
+  bottom: 20px;
+  left: 115vh;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  transition: color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+.footer-text2:hover a{
+ color: #f8742b;
+  transition: color 0.3s ease;
+}
+.footer-text3:hover a{
+  color: #f8742b;
+  transition: color 0.3s ease;
+}

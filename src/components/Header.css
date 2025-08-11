@@ -1,0 +1,149 @@
+/* ===== Navbar Base (for Laptops, 1920x1080, and larger screens) ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 8.5vh;
+  background: transparent;
+  display: flex;
+  background-color: #2a2a2a;
+  justify-content: space-between; /* Correctly spaces the logo and links */
+  align-items: center;
+  padding: 1rem 2.5rem;
+  z-index: 1000;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== Navbar After Scroll ===== */
+.navbar-scrolled {
+  background: #2a2a2a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Logo Section ===== */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Navigation Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  background-color: #2a2a2a;
+  transition: color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text color when at the top */
+.nav-links.top-links a {
+
+
+  color: #2a2a2a;
+}
+.nav-links.top-links {
+  position: relative;
+  right: 7vh;
+}
+.nav-links.scrolled-links{
+  position: relative;
+  right: 7vh;
+}
+/* Text color when scrolled */
+.nav-links.scrolled-links a {
+  color: white;
+}
+
+/* General nav link styles */
+.nav-links a {
+  text-decoration: none;
+  border-bottom: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for all links */
+.nav-links a:hover {
+  color: #f8742b;
+  transition: color 0.3s ease;
+}
+
+/* Optional: special effect for clickable buttons */
+.object:hover {
+  transform: scale(0.96);
+}
+
+
+  
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 10px;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Mobile phones (768px and below) ===== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .logo-section {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 0.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a:hover {
+    background-color: #f8742b;
+    color: #2a2a2a;
+  }
+}
