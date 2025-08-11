@@ -38,6 +38,7 @@ function ProjectsSection() {
 
   const fadeRefs = useFadeUpOnScroll();
   const typewriter = useTypewriter();
+  
   return (
     <section className="projects-section">
       <div className="projects-content">
@@ -57,17 +58,19 @@ function ProjectsSection() {
           <ImageCarousel />
         </div>
       </div>
-        <div className="about-section" >
+      
+      {/* Fresh About Section */}
+      <div className="about-section">
         {/* First Row: About Us */}
         <div className="about-content-wrapper">
           <div className="about-text">
-            <span className="about-us-label">About Us</span>
-            <div style={{ height: '3px', width: '50px', background: '#f7842b', margin: '8px 0 16px 0', borderRadius: '2px' }} />
+            <span className="about-us-label">WHO ARE WE?</span>
+            <div className="about-underline"></div>
             <h2 className="about-title">Who are we?</h2>
             <p className="about-desc">
               AMES is a dynamic platform by and for Mechanical Engineering students at NITK. We empower each other with hands-on learning, industry insights, and lifelong connections.
             </p>
-            <button className="about-btn">Know More</button>
+            <button className="about-btn">KNOW MORE</button>
           </div>
           <div className="about-image">
             <img src={aboutImage} alt="Graduation" />
@@ -75,87 +78,24 @@ function ProjectsSection() {
         </div>
       
         {/* Second Row: Objectives */}
-        <div className="about-content-wrapper" style={{ marginTop: "2.5rem" }}>
+        <div className="about-content-wrapper">
           <div className="about-image2">
             <img src={objectivesImage} alt="Classroom" />
           </div>
           <div className="about-text2">
-            <span className="about-us-label">Objectives</span>
-            <div style={{ height: '3px', width: '50px', background: '#f7842b', margin: '8px 0 16px 0', borderRadius: '2px' }} />
-            <h2 className="about-title" >Objectives That Drives Us</h2>
-            <ul className="about-desc" style={{ marginBottom: "1.5rem" }}>
+            <span className="about-us-label">OBJECTIVES</span>
+            <div className="about-underline"></div>
+            <h2 className="about-title">Objectives That Drives Us</h2>
+            <ul className="about-desc">
               <li>Cultivate a culture of engineering excellence through shared knowledge and collaborative initiatives.</li>
               <li>Bridge the academia-industry gap via projects & mentorship.</li>
               <li>Promote interdisciplinary research & social innovation</li>
             </ul>
-            <button className="about-btn">Explore</button>
+            <button className="about-btn">EXPLORE</button>
           </div>
+        </div>
       </div>
-      {/* <div className="featured-projects-nitk" ref={eventRef}> */}
-      {/* <div className="fp-content-left">
-            <div className="fp-header" >Featured Events</div>
-            <div className="fp-desc">
-              NITK instituted the Alumni Awards to recognize the exemplary
-              achievements of its former students.
-            </div>
-            <div className="fp-projects-list">
-              {eventsData.map((project, idx) => (
-                <div
-                  key={project.title}
-                  className={`fp-project-title${activeIndex === idx ? " active" : ""}`}
-                  onClick={() => handleClick(idx)}
-                  tabIndex={0}
-                  role="button"
-                >
-                  <span className="fp-bullet">&#8226;</span>
-
-                  <div className="title-details">
-                    <div className="title"><span>{project.title}</span></div>
-
-                    {activeIndex === idx && (
-                      <div className="fp-project-details">
-                        <div className="fp-project-description">{project.details}</div>
-                        <a
-                          href="*"
-                          className="fp-read-more-btn"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          READ MORE <span aria-hidden="true">↗</span>
-                        </a>
-                        <div className="fp-progress-bar-container">
-                          <div className="fp-progress-label"></div>
-                          <div className="fp-progress-bar">
-                            <div
-                              key={barKey}
-                              className="fp-progress-bar-inner"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div> */}
-
-      {/* <div className="fp-content-right">
-            {eventsData[activeIndex].image ? (
-              <img
-                src={eventsData[activeIndex].image}
-                alt={eventsData[activeIndex].title}
-                className="fp-project-image"
-              />
-            ) : (
-              <div className="fp-project-image fp-image-placeholder">
-                No Image Available
-              </div>
-            )}
-          </div> */}
-      {/* </div> */}
-    </div>
-    </section >
+    </section>
   );
 }
 
