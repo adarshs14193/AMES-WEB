@@ -58,6 +58,8 @@ function ProjectsSection() {
           <ImageCarousel />
         </div>
       </div>
+
+
       
       {/* Fresh About Section */}
       <div className="about-section">
@@ -68,6 +70,8 @@ function ProjectsSection() {
             <div className="about-underline"></div>
             <h2 className="about-title">Who are we?</h2>
             <p className="about-desc">
+
+
               AMES is a dynamic platform by and for Mechanical Engineering students at NITK. We empower each other with hands-on learning, industry insights, and lifelong connections.
             </p>
             <button className="about-btn">KNOW MORE</button>
@@ -76,17 +80,12 @@ function ProjectsSection() {
             <img src={aboutImage} alt="Graduation" />
           </div>
         </div>
-      
         {/* Second Row: Objectives */}
         <div className="about-content-wrapper">
           <div className="about-image2">
             <img src={objectivesImage} alt="Classroom" />
           </div>
           <div className="about-text2">
-            <span className="about-us-label">OBJECTIVES</span>
-            <div className="about-underline"></div>
-            <h2 className="about-title">Objectives That Drives Us</h2>
-            <ul className="about-desc">
               <li>Cultivate a culture of engineering excellence through shared knowledge and collaborative initiatives.</li>
               <li>Bridge the academia-industry gap via projects & mentorship.</li>
               <li>Promote interdisciplinary research & social innovation</li>
@@ -95,7 +94,12 @@ function ProjectsSection() {
           </div>
         </div>
       </div>
+
+
+    </section >
+
     </section>
+
   );
 }
 
